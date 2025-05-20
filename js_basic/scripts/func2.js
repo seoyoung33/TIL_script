@@ -168,6 +168,38 @@ function discount(price){
     discountResult += `${price}원의 30% 할인가 ${price*0.70}원 / `
     discountResult += `${price}원의 40% 할인가 ${price*0.60}원 / `
     discountResult += `${price}원의 50% 할인가 ${price*0.50}원`
-    return discountResult;
+    return discountResult; // 함수 내 내용이 많다면 여기서 끝난다하고 알려주기 위해 return을 쓴다.
 }
 console.log(discount(27900));
+//----------------------------- 함수 5/20
+console.log('---------------------------------------5/20 익명함수');
+// 익명함수란? 변수 내 function 키워드를 지정해 대입하는 함수
+// 함수 자체의 이름이 아닌 변수 이름에 의존해서 할당되기 때문에 익명함수라고 부른다.
+// function greeting(){} //일반함수
+const greeting = function(){
+    console.log('hello');
+} //익명함수
+greeting(); //익명함수 호출은 함수명이 아닌 변수명으로 호출한다.
+//익명함수는 일반함수와 다르게 함수선언보다 먼저 호출하면 오류가 발생한다.
+console.log('---------------------------------------화살표함수 ES6이후')
+//화살표 함수는 일반함수가 아닌 익명함수일때 함수를 간결하게 줄이는 목적으로 사용된다.
+//function을 => 기호로 바꿔서 사용한다.
+//대입연산자(=)와 화살표변수(=>)를 붙여서 사용할 수 없기 때문에 매개변수(())와 함수 선언표시 순서를 바꿔서 =()=>로 사용한다.
+//일반함수인 경우
+function bab(num){
+    return '밥'+num+'공기 주세요';
+}
+console.log(bab(5));
+//화살표함수(익명함수) 경우
+const bab2 = (num) =>
+    {return '밥'+num+'공기 주세요';} //중괄호를 넣는게 익숙하다면 넣어주는게 오류방지에 좋음
+console.log(bab2(2));
+console.log('---------------------------------------화살표함수 실습')
+//함수 호출할 때마다 아래와 같은 결과 출력하기 (매개변수 활용)
+//밥 주세요
+//반찬 주세요
+//국 주세요
+const lunch = (food) => {return `${food} 이요~`}
+console.log(lunch('밥'));
+console.log(lunch('반찬'));
+console.log(lunch('국'));
