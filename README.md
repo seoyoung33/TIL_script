@@ -21,3 +21,13 @@
 * 화살표 함수는 일반함수가 아닌 익명함수일때 함수를 간결하게 줄이는 목적으로 사용된다.
 * function을 => 기호로 바꿔서 사용한다.
 * 대입연산자(=)와 화살표변수(=>)를 붙여서 사용할 수 없기 때문에 매개변수와 함수 선언표시 순서를 바꿔서 =()=>로 사용한다.
+------------
+## 자바스크립트 DOM 지정규칙
+* HTML 태그의 class, name, id, value 등의 이름 규칙 : 영어소문자_영어소문자 (예) `user_id`
+* Javascript 의 함수 및 변수 이름 규칙 : Camel표기법 (예) `userId`
+### 변수 등록 시 순서(아래)
+* `const 의미있는변수명 = document.querySelelctor('HTML요소 또는 클래스, 아이디, 속성선택자 등')`
+* `const userId = document.querySelector('.user_id');` 
+* `let liActive = document.querySelector('li.active');`<!-- li의 클래스 active를 문서에서 찾아서 liAcive변수에 넣겠다.  -->
+* `var pwIO = document.querySelector(input[type*=pass]');` <!-- IO:Input, Output -->
+* `let genderChk = document.querySelector('input[name=gender]');`
