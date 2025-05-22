@@ -1,0 +1,23 @@
+body, html {
+    padding:0 10px; background-color:#f5f5f5;
+    background:url(../images/youngji.jpg) no-repeat center 0 / cover;
+}
+main {
+    max-width:420px; min-width:320px; margin:30px auto 0;
+    background-color: #fff; padding:30px;
+    border:1px solid #000;
+}
+main h1 {
+    background-color: aqua;
+    font-size:1.25rem; font-weight:700;
+}
+main p {margin:10px 0 30px;}
+main .info {background-color: yellow;}
+main .info li {}
+main .info li span {}
+main .info li input[name*=user] {border:1px solid #000;}
+main #result_btn {
+    background-color:coral;
+    margin:30px 0;
+}
+main #result {border:1px solid blue;}
