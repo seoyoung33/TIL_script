@@ -11,24 +11,53 @@ thumbnailA[0].addEventListener('click',function(){
     console.log(this);//이벤트객체자동인식하는지 확인
     console.log(this.children[0].src);//자식이 많아질 수 있으니 꼭 인덱스(순서)적기!!!
     console.log(popupBg.children[0].children[0].src);//팝업 bg의 자식의 자식의 src확인
-    popupOpen(); //팝업 출력함수 호출
-    popupBg.children[0].children[0].src = this.children[0].src
+    popupOpen(this); //팝업 출력함수 호출
+    
     //(위)대입되는 위치(popup자식의자식의 src에 대입하겠다.) = 대입되는 값(내 자식의 src를)
 })
 thumbnailA[1].addEventListener('click',function(){
-    popupOpen(); //팝업 출력함수 호출
-    popupBg.children[0].children[0].src = this.children[0].src
+    popupOpen(this); //팝업 출력함수 호출
 });
 thumbnailA[2].addEventListener('click',function(){
-    popupOpen(); //팝업 출력함수 호출
+    popupOpen(this); //팝업 출력함수 호출
     popupBg.children[0].children[0].src = this.children[0].src
 });
 thumbnailA[3].addEventListener('click',function(){
-    popupOpen(); //팝업 출력함수 호출
-    popupBg.children[0].children[0].src = this.children[0].src
+    popupOpen(this); //팝업 출력함수 호출
 });
-function popupOpen(){
-    return popupBg.style.display = 'flex';
+thumbnailA[4].addEventListener('click',function(){
+    popupOpen(this); //팝업 출력함수 호출
+});
+thumbnailA[5].addEventListener('click',function(){
+    popupOpen(this); //팝업 출력함수 호출
+});
+thumbnailA[6].addEventListener('click',function(){
+    popupOpen(this); //팝업 출력함수 호출
+});
+thumbnailA[7].addEventListener('click',function(){
+    popupOpen(this); //팝업 출력함수 호출
+});
+thumbnailA[8].addEventListener('click',function(){
+    popupOpen(this); //팝업 출력함수 호출
+});
+thumbnailA[9].addEventListener('click',function(){
+    popupOpen(this); //팝업 출력함수 호출
+});
+thumbnailA[10].addEventListener('click',function(){
+    popupOpen(this); //팝업 출력함수 호출
+});
+thumbnailA[11].addEventListener('click',function(){
+    popupOpen(this); //팝업 출력함수 호출
+});
+function popupOpen(target){
+    console.log('-------------------------함수시작 위치 에러체크');
+    console.log(popupBg.children[0]); //정상체크
+    console.log(popupBg.children[0].children[0]); //정상체크
+    //console.log(this.children[0]); //에러체크!!
+    popupBg.style.display = 'flex';
+    popupBg.children[0].children[0].src = target.children[0].src
+    // popupBg.children[0].children[0].src = this.children[0].src //이벤트 내에서 함수로 불러오는 구조로 작성해야 함.
+    return; //함수종료
 }
 // 3. (팝업실행기준) 배경클릭 시 팝업 다시 숨기기
 popupBg.addEventListener('click',popupClose);
