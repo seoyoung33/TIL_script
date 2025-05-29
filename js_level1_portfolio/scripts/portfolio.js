@@ -12,7 +12,6 @@ thumbnailA[0].addEventListener('click',function(){
     console.log(this.children[0].src);//자식이 많아질 수 있으니 꼭 인덱스(순서)적기!!!
     console.log(popupBg.children[0].children[0].src);//팝업 bg의 자식의 자식의 src확인
     popupOpen(this); //팝업 출력함수 호출
-    
     //(위)대입되는 위치(popup자식의자식의 src에 대입하겠다.) = 대입되는 값(내 자식의 src를)
 })
 thumbnailA[1].addEventListener('click',function(){

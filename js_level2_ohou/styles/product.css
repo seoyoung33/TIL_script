@@ -1,3 +1,4 @@
+body,html {scroll-behavior:smooth;}
 main {
     background:aqua;
     width:995px; margin:0 auto;
@@ -29,7 +30,7 @@ main section .right_order h2 {}
 main section .right_order .review {}
 main section .right_order .review .score {}
 main section .right_order .review .score em {}
-main section .right_order .review .num {}
+main section .right_order .review .num {display:inline-block; margin-bottom:25px;}
 main section .right_order .sale_price {}
 main section .right_order .sale_price em {}
 main section .right_order .sale_price del {}
@@ -63,6 +64,17 @@ main section .right_order .product_option select[name=size] option {}
 main section .right_order .total {
     display:flex; flex-flow:row nowrap; justify-content:space-between;
 }
+/* JS에서 select클릭 시 출력되는 영역 시작 */
+main section .rigth_order .order_select {}
+main section .rigth_order .order_select .list{}
+main section .rigth_order .order_select .list .color {}
+main section .rigth_order .order_select .list .size {}
+main section .rigth_order .order_select .close {}
+main section .rigth_order .order_select .order_num {}
+main section .rigth_order .order_select .order_num #minus {}
+main section .rigth_order .order_select .order_num input[name=user_num] {}
+main section .rigth_order .order_select .order_num #plus {}
+/* JS에서 select클릭 시 출력되는 영역 끝 */
 main section .right_order .total p {}
 main section .right_order .total .price {}
 main section .right_order .total .price em {}
@@ -78,3 +90,6 @@ main section .right_order .btn_group #cart_btn {
 main section .right_order .btn_group #buy_btn {
     background-color:#59AFFF; color:#fff;
 }
+main .info {height:100vh;}
+main #review {height:100vh; background:greenyellow;}
+main .board {height:100vh;}
