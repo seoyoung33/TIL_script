@@ -1,0 +1,27 @@
+.wrap {
+    background:url(https://img.freepik.com/free-photo/flower-narcissus-isolated-white-background_127675-2550.jpg?uid=R193157793&ga=GA1.1.1410164497.1742888569&semt=ais_hybrid&w=740) no-repeat center / cover;
+    max-width:480px; min-width:480px; height:100vh; margin:50px auto 0;
+    border:2px solid salmon;
+}
+.wrap .container {
+    margin:0 auto; border:2px solid blue; width:100%;
+}
+.wrap .container .birthday {
+    display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px;
+    width:100%;
+}
+.wrap .container .birthday li {display:flex; align-items:center;}
+.wrap .container .birthday li input {
+    background-color:aqua; padding:3px 10px; width:100px;
+    border-radius:5px; text-align:center;
+}
+.wrap .container .birthday li input[name*=year] {}
+.wrap .container .birthday li input[name*=month] {}
+.wrap .container .birthday li input[name*=day] {}
+.wrap .container .birthday li span {}
+.wrap .container .birthday li:nth-child(1) {}
+.wrap .container .birthday li:nth-child(2) {}
+.wrap .container .birthday li:nth-child(3) {}
+.wrap .container .result_btn {}
+.wrap .container .result_btn #lang_flower_btn {}
+.wrap .container .result {}

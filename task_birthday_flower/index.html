@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>birthday flower</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="./scripts/index.js"></script>
+</head>
+<body> <!-- 모바일버전 너비 320px ~ 480px -->
+    <div class="wrap">
+        <div class="container">
+            <ul class="birthday">
+                <li>
+                    <input type="number" name="birth_year" value="1994">
+                    <span>년</span>
+                </li>
+                <li>
+                    <input type="number" name="birth_month" value="0">
+                    <span>월</span>
+                </li>
+                <li>
+                    <input type="number" name="birth_day" value="3">
+                    <span>일</span>
+                </li>
+            </ul>
+            <p class="result_btn">
+                <button type="button" id="lang_flower_btn">탄생화의 꽃말은?</button>
+            </p>
+            <p id="result"><!-- 결과출력위치 --></p>
+        </div>
+    </div>
+</body>
+</html>
