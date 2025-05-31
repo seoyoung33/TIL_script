@@ -1,0 +1,61 @@
+// 알고리즘 파악하기
+// 1. input[name*=month].value에 1월 ~ 12월까지의 내용을 입력
+// 2. #lang_flower_btn을 누르면 '12월의 탄생화는 포인세티아이고 꽃말은 축하, 감사입니다.'의 값이 #result의 위치에 출력
+// 3. 버튼 아래에서 내용 확인 가능
+// 변수는 input, btn, result 3개
+// 배열 1월부터 12월까지 12개
+const birthdayFlower = [
+    {
+        month:1,
+        flower:'수선화',
+        content:'자기애, 자존심, 외로움',
+    },{
+        month:2,
+        flower:'제비꽃',
+        content:'겸손, 양보',
+    },{
+        month:3,
+        flower:'수선화',
+        content:'자기애, 자존심, 외로움',
+    },{
+        month:4,
+        flower:'스위트피',
+        content:'추억, 즐거움'
+    },{
+        month:5,
+        flower:'은방울꽃',
+        content:'희망, 섬세함'
+    },{
+        month:6,
+        flower:'백합',
+        content:'순결'
+    },{
+        month:7,
+        flower:'미나리아재비',
+        content:'아름다움, 인격'
+    },{
+        month:8,
+        flower:'글라디올러스',
+        content:'비밀, 상상, 견고함'
+    },{
+        month:9,
+        flower:'물망초',
+        content:'진실한 사랑'
+    },{
+        month:10,
+        flower:'금잔화',
+        content:'실망, 비애'
+    },{
+        month:11,
+        flower:'국화',
+        content:'성실, 진실'
+    },{
+        month:12,
+        flower:'포인세티아',
+        content:'축하, 감사'
+    }
+];
+const birthMonth = document.querySelector('input[name*=month]');
+const langFlowerBtn = document.querySelector('#lang_flower_btn');
+const resultMsg = document.querySelector('#result_text');
+console.log(birthdayFlower,birthMonth,langFlowerBtn,resultMsg);

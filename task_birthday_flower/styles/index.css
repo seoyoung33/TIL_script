@@ -1,27 +1,45 @@
 .wrap {
     background:url(https://img.freepik.com/free-photo/flower-narcissus-isolated-white-background_127675-2550.jpg?uid=R193157793&ga=GA1.1.1410164497.1742888569&semt=ais_hybrid&w=740) no-repeat center / cover;
-    max-width:480px; min-width:480px; height:100vh; margin:50px auto 0;
-    border:2px solid salmon;
+    max-width:480px; min-width:480px; height:100vh; 
+    margin:0 auto;position:relative;
+}
+.wrap * {font-size:1.125rem;}
+.wrap > p {
+    width:100%; height:100vh; 
+    background:linear-gradient(#F7CFD8, #F4F8D3, #A6F1E0, #73C7C7);
+    opacity:0.3; position:relative; z-index:10;
 }
 .wrap .container {
-    margin:0 auto; border:2px solid blue; width:100%;
+    margin:0 auto; 
+    width:80%; border:1px solid #73C7C7;
+    position:absolute; top:100px; left:50%; transform:translateX(-50%); z-index:20; padding:30px; border-radius:10px;
+    text-align:center;
 }
 .wrap .container .birthday {
-    display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px;
-    width:100%;
+    display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; width:100%; 
 }
-.wrap .container .birthday li {display:flex; align-items:center;}
+.wrap .container .birthday li {
+    display:flex; flex-flow:row nowrap; justify-content:center;
+    gap:10px; align-items:center;
+}
 .wrap .container .birthday li input {
-    background-color:aqua; padding:3px 10px; width:100px;
+    background-color:#F4F8D3; border:1px solid #FFD586;
+    padding:3px 10px; width:80px;
     border-radius:5px; text-align:center;
 }
 .wrap .container .birthday li input[name*=year] {}
 .wrap .container .birthday li input[name*=month] {}
 .wrap .container .birthday li input[name*=day] {}
-.wrap .container .birthday li span {}
+.wrap .container .birthday li span {
+    color:#096B68; font-weight:500;
+}
 .wrap .container .birthday li:nth-child(1) {}
 .wrap .container .birthday li:nth-child(2) {}
 .wrap .container .birthday li:nth-child(3) {}
-.wrap .container .result_btn {}
-.wrap .container .result_btn #lang_flower_btn {}
+.wrap .container .result_btn {
+    margin:30px auto 0; background-color:#A6F1E0;
+    padding:15px 0; border-radius:5px;
+}
+.wrap .container .result_btn #lang_flower_btn {
+    color:#096B68; font-weight:500;}
 .wrap .container .result {}
