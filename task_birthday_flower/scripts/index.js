@@ -56,18 +56,39 @@ const birthdayFlower = [
     }
 ];
 const birthMonth = document.querySelector('input[name*=month]');
-const langFlowerBtn = document.querySelector('#lang_flower_btn');
+const langFlowerBtn = document.querySelector('.result_btn');
 const resultMsg = document.querySelector('#result_text');
 const bgFlower = document.querySelector('.wrap'); //할 수 있으려나...
+let flowerKind;
+let langFlowerContents;
+let monthMsg;
 console.log(birthdayFlower,birthMonth,langFlowerBtn,resultMsg,bgFlower);
+resultMsg.style.display = 'none';
+//=======테스트=============
+/* langFlowerBtn.addEventListener('click',function(){resultMsgOpen(1);})
+function resultMsgOpen(birth){
+    monthMsg = `birthdayFlower[birth].month`;
+    flowerKind = `birthdayFlower[birth].flower`;
+    langFlowerContents = `birthdayFlower[birth].content`
+    console.log(monthMsg,flowerKind,langFlowerContents);
+    if(birthdayFlower[birth].month == birthMonth.value){
+        resultMsg.style.display = 'block';
+    }
+    console.log(`${birthMonth.value}월의 탄생화는 ${flowerKind}이고 꽃말은 ${langFlowerContents}입니다.`)
+    // return resultMsg.innerHTML = `${birthMonth.value}월</em>의 탄생화는 <em>${flowerKind}</em>이고<br>꽃말은 <em>${langFlowerContents}</em>입니다.`
+} */
+//=========테스트 end===========
 langFlowerBtn.addEventListener('click',MsgOpen);
 function MsgOpen(){
+    const msgContent1 = ``;
     console.log(birthdayFlower[0].month);
     console.log(birthMonth.value);
     if(birthdayFlower[0].month == birthMonth.value){
+        resultMsg.style.display = 'block';
         return resultMsg.innerHTML =`<em>${birthMonth.value}월</em>의 탄생화는 <em>${birthdayFlower[0].flower}</em>이고<br>꽃말은 <em>${birthdayFlower[0].content}</em>입니다.`
     }
     if(birthdayFlower[1].month == birthMonth.value){
+        resultMsg.style.display = 'block';
         return resultMsg.innerHTML =`<em>${birthMonth.value}월</em>의 탄생화는 <em>${birthdayFlower[1].flower}</em>이고<br>꽃말은 <em>${birthdayFlower[1].content}</em>입니다.`
     }
     if(birthdayFlower[2].month == birthMonth.value){
