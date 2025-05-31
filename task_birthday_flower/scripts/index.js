@@ -58,4 +58,46 @@ const birthdayFlower = [
 const birthMonth = document.querySelector('input[name*=month]');
 const langFlowerBtn = document.querySelector('#lang_flower_btn');
 const resultMsg = document.querySelector('#result_text');
-console.log(birthdayFlower,birthMonth,langFlowerBtn,resultMsg);
+const bgFlower = document.querySelector('.wrap'); //할 수 있으려나...
+console.log(birthdayFlower,birthMonth,langFlowerBtn,resultMsg,bgFlower);
+langFlowerBtn.addEventListener('click',MsgOpen);
+function MsgOpen(){
+    console.log(birthdayFlower[0].month);
+    console.log(birthMonth.value);
+    if(birthdayFlower[0].month == birthMonth.value){
+        return resultMsg.innerHTML =`<em>${birthMonth.value}월</em>의 탄생화는 <em>${birthdayFlower[0].flower}</em>이고<br>꽃말은 <em>${birthdayFlower[0].content}</em>입니다.`
+    }
+    if(birthdayFlower[1].month == birthMonth.value){
+        return resultMsg.innerHTML =`<em>${birthMonth.value}월</em>의 탄생화는 <em>${birthdayFlower[1].flower}</em>이고<br>꽃말은 <em>${birthdayFlower[1].content}</em>입니다.`
+    }
+    if(birthdayFlower[2].month == birthMonth.value){
+        return resultMsg.innerHTML =`<em>${birthMonth.value}월</em>의 탄생화는 <em>${birthdayFlower[2].flower}</em>이고<br>꽃말은 <em>${birthdayFlower[2].content}</em>입니다.`
+    }
+    if(birthdayFlower[3].month == birthMonth.value){
+        return resultMsg.innerHTML =`<em>${birthMonth.value}월</em>의 탄생화는 <em>${birthdayFlower[3].flower}</em>이고<br>꽃말은 <em>${birthdayFlower[3].content}</em>입니다.`
+    }
+    if(birthdayFlower[4].month == birthMonth.value){
+        return resultMsg.innerHTML =`<em>${birthMonth.value}월</em>의 탄생화는 <em>${birthdayFlower[4].flower}</em>이고<br>꽃말은 <em>${birthdayFlower[4].content}</em>입니다.`
+    }
+    if(birthdayFlower[5].month == birthMonth.value){
+        return resultMsg.innerHTML =`<em>${birthMonth.value}월</em>의 탄생화는 <em>${birthdayFlower[5].flower}</em>이고<br>꽃말은 <em>${birthdayFlower[5].content}</em>입니다.`
+    }
+    if(birthdayFlower[6].month == birthMonth.value){
+        return resultMsg.innerHTML =`<em>${birthMonth.value}월</em>의 탄생화는 <em>${birthdayFlower[6].flower}</em>이고<br>꽃말은 <em>${birthdayFlower[6].content}</em>입니다.`
+    }
+    if(birthdayFlower[7].month == birthMonth.value){
+        return resultMsg.innerHTML =`<em>${birthMonth.value}월</em>의 탄생화는 <em>${birthdayFlower[7].flower}</em>이고<br>꽃말은 <em>${birthdayFlower[7].content}</em>입니다.`
+    }
+    if(birthdayFlower[8].month == birthMonth.value){
+        return resultMsg.innerHTML =`<em>${birthMonth.value}월</em>의 탄생화는 <em>${birthdayFlower[8].flower}</em>이고<br>꽃말은 <em>${birthdayFlower[8].content}</em>입니다.`
+    }
+    if(birthdayFlower[9].month == birthMonth.value){
+        return resultMsg.innerHTML =`<em>${birthMonth.value}월</em>의 탄생화는 <em>${birthdayFlower[9].flower}</em>이고<br>꽃말은 <em>${birthdayFlower[9].content}</em>입니다.`
+    }
+    if(birthdayFlower[10].month == birthMonth.value){
+        return resultMsg.innerHTML =`<em>${birthMonth.value}월</em>의 탄생화는 <em>${birthdayFlower[10].flower}</em>이고<br>꽃말은 <em>${birthdayFlower[10].content}</em>입니다.`
+    }
+    if(birthdayFlower[11].month == birthMonth.value){
+        return resultMsg.innerHTML =`<em>${birthMonth.value}월</em>의 탄생화는 <em>${birthdayFlower[11].flower}</em>이고<br>꽃말은 <em>${birthdayFlower[11].content}</em>입니다.`
+    }
+};
