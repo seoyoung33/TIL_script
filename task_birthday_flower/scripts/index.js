@@ -64,7 +64,7 @@ let langFlowerContents;
 let monthMsg;
 console.log(birthdayFlower,birthMonth,langFlowerBtn,resultMsg,bgFlower);
 resultMsg.style.display = 'none';
-//=======테스트=============
+//=======테스트 으악...=============
 /* langFlowerBtn.addEventListener('click',function(){resultMsgOpen(1);})
 function resultMsgOpen(birth){
     monthMsg = `birthdayFlower[birth].month`;
