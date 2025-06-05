@@ -28,6 +28,16 @@ langSelect.addEventListener('click',()=>{
 // 4. 조건3 상황에서 로그인실패가 3회 이상일 때
 // 4결과)영수증 퀴즈와 '아이디(로그인 전화번호, 로그인 전용 아이디), 비밀번호 또는 자동입력 방지 문자를 잘못 입력했습니다. 입력하신 내용을 다시 확인해 주세요.' 메세지 출력
 
+// 네이버 회원정보 저장 DB
+const naverUserDB = [{
+    id:'aaa',
+    pw:'a1234',
+},{
+    id:'bbb',
+    pw:'b1234',
+}]
+console.log(naverUserDB);
+
 // 1. 아이디, 비밀번호 미입력 후 버튼클릭시
 // 1결과)'아이디 또는 전화번호를 입력해 주세요' => 변수 4개
 const userId = document.querySelector('input[name*=id]')
@@ -37,13 +47,19 @@ const loginBtn = document.querySelector('#login_btn')
 console.log(userId, userPw, errorMsg, loginBtn);
 loginBtn.addEventListener('click',()=>{
     if(userId.value==''&&userPw.value==''){
-        errorMsg.textContent='아이디 또는 전화번호를 입력해 주세요';
-    }else if(userId.value==''){
+        //아이디와 비밀번호를 모두 입력하지 않았을 시 실행결과
         errorMsg.textContent='아이디 또는 전화번호를 입력해 주세요';
     }else if(userPw.value==''){
+        //조건1이 거짓이고 조건2의 비밀번호를 입력안했는가
         errorMsg.textContent='비밀번호를 입력해주세요';
+    }else if(userId.value==''){
+        errorMsg.textContent='아이디를 입력해 주세요';
+    }else if(userId.value == naverUserDB[0].id&&userPw.value == naverUserDB[0].pw){
+        //아이디와 비밀번호가 DB서버의 0인덱스값과 모두 일치할 때 네이버 메인페이지로 이동
+        window.location.href = 'https://naver.com';
     }else{
-        errorMsg.textContent='';
+        //위 모든 조건이 거짓일때
+        errorMsg.textContent = '아이디(로그인 전화번호, 로그인 전용 아이디) 또는 비밀번호가 잘못되었습니다. 아이디와 비밀번호를 정확히 입력해 주세요' //사용자가 불편하더라도 보안의 측면에서 봤을 때 애매하게 알려주는 것이 좋음!!
     }
     // 삼항조건 활용 조건1
     //조건식 ? 조건식참결과 : 조건식거짓결과

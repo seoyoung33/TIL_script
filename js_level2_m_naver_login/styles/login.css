@@ -52,7 +52,8 @@ main .login_wrap .login_inner #login_frm .id_pw_wrap input[name*=id] {
 }
 main .login_wrap .login_inner #login_frm .id_pw_wrap input[name*=pw] {}
 main .login_wrap .login_inner #login_frm .error_msg {
-    color:#f00; font-size:0.81rem; padding:10px 0 30px; line-height:1.4;
+    color:#f00; font-size:0.81rem; 
+    text-align:left; padding:10px 0 30px; line-height:1.4;
 }
 main .login_wrap .login_inner #login_frm #login_btn {
     background-color:#888; color:#fff;
