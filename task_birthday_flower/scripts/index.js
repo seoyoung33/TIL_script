@@ -80,7 +80,6 @@ function resultMsgOpen(birth){
 //=========테스트 end===========
 langFlowerBtn.addEventListener('click',MsgOpen);
 function MsgOpen(){
-    const msgContent1 = ``;
     console.log(birthdayFlower[0].month);
     console.log(birthMonth.value);
     if(birthdayFlower[0].month == birthMonth.value){
