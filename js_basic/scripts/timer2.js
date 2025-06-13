@@ -1,5 +1,5 @@
 //setIntercal(콜백함수, 시간)
-let num = 0; //0, 400, 800 출력을 위한 숫자변수
+let num = 2; //0, 400, 800 출력을 위한 숫자변수
 const slideC = document.querySelector('.slide_container');
 slideC.style.transition = 'transform 1.5s'
 const slideTimer = setInterval(()=>{
