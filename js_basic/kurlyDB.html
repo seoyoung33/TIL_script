@@ -1,0 +1,65 @@
+<!-- kurlyDB.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마켓컬리 DB 데이터 불러오기(무한 스크롤)</title>
+    <link rel="stylesheet" href="../js_level2_m_naver_login/styles/reset.css">
+    <!-- DOM 활용 용도가 아니라 DB 불러오는 용도이므로 defer 필요없음 ↓↓↓ -->
+    <script src="./scripts/kurlyDB.js"></script>
+    <script src="./scripts/kurlyDB_DOM.js" defer></script>
+    <style>
+        header, footer {
+            height:80px; background:#111;
+        }
+        main {}
+        main .bnr {height:70vh; background:#ccc;}
+        main .product {padding:150px 0;}
+        main .product h1 {text-align:center; font-weight:600; font-size:1.2rem;}
+        main .product #container {
+            display:flex; flex-flow:row wrap; width:1000px; margin:80px auto 0;
+        }
+        main .product #container li {
+            border:1px solid #eee;
+            width:calc((100% - 20px) / 3);
+            padding-bottom:50px;
+            margin-right:10px;
+            margin-bottom:50px;
+        }
+        main .product #container li:nth-child(3n) {margin-right:0;}/* 맨 뒤에 있는 애는 마진 안줄게~ 근데 나중을 생각해서 3의 배수한테 적용할게~ */
+        main .product #container li img {width:100%;}
+        main .product #container li p {line-height:1.5; padding:0 6px;}
+        main .product #container li .name {}
+        main .product #container li .summary {color:#aaa;}
+        main .product #container li .price_original {}
+        main .product #container li .price_original del{color:#bbb;}
+        main .product #container li .sale {font-size:1.2rem; color:#5f0080; font-weight:800; float:left;}
+        main .product #container li .price {font-size:1.2rem; font-weight:600;}
+        main .product #container li .review {font-size:0.875rem; color:#ccc;}
+        /* 광고 애니메이션 클래스 */
+        main .ad {}
+        main .ad p {opacity:0; transform:translate(0, 100px);transition:all 1s;}
+        main .ad p img {}
+        main .ad p.active {opacity:1; transform:translate(0,0);}/* JS */
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <main>
+        <div class="bnr">광고</div>
+        <div class="product">
+            <h1>product</h1>
+            <ul id="container">
+                <!-- DB삽입위치 -->
+            </ul>
+        </div>
+        <div class="ad">
+            <p><img src="https://product-image.kurly.com/hdims/resize/%3E1900x%3E370/quality/85/src/banner/main/pc/img/973738d9-406f-4ead-9045-02f5f951c5da.png" alt="광고1"></p>
+            <p><img src="https://product-image.kurly.com/hdims/resize/%3E1900x%3E370/quality/85/src/banner/main/pc/img/82e4fb5d-28ce-454f-b6df-d4d25fdd5a38.png" alt="광고2"></p>
+            <p><img src="https://product-image.kurly.com/hdims/resize/%3E1900x%3E370/quality/85/src/banner/main/pc/img/67bdea5c-3e94-4404-b31a-37c781ea5a9c.jpg" alt="광고3"></p>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>
