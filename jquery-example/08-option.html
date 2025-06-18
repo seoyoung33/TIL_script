@@ -13,7 +13,7 @@
         .box select {width:50%; border:1px solid #aaa; padding:5px; outline:none;}
         .box p {line-height: 2;}
         .box .select {border-top:1px dotted #222; margin-top:10px;}
-        .box .close {margin-left:30px;}
+        .box .close {margin-left:30px; width:20px; font-size:0.75rem;}
     </style>
 </head>
 <body>
@@ -28,7 +28,29 @@
         <p class="select">선택옵션 : <span></span><button type="button" class="close">x</button></p>
     </div>
     <script>
-        
+        const $selectP = $('.select');
+        const $colorSelect = $('#color');
+        const $closeBtn = $('.close');
+        console.log($selectP,$colorSelect,$closeBtn);
+        $selectP.hide(); //초기 숨기기
+
+        //select 태그의 옵션값이 변경되면 p태그에 변경된 옵션값 출력하기
+        $colorSelect.change(function(){
+            //console.log('변경');
+            //현재(this)변경 대상의 자식, 자손(find)중 선택된(checked)옵션 값(val)을 찾아라
+            console.log($(this).find('option:checked').val())
+            $selectP.show();
+            //p의 자식 span 안에 위 값을 출력하기
+            const selectVal = $(this).find('option:checked').val()
+            $selectP.find('span').text(selectVal);
+        })
+        $closeBtn.click(()=>{
+            $selectP.css('display','none');
+        })
+        /* $closeBtn.click(function(){
+            $(this).parent().hide()
+        }) */
+
     </script>
 </body>
 </html>
