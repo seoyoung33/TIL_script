@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>swiper-direction1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <!--플러그인 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        * {margin:0; padding:0; line-height:1.0; box-sizing:border-box;}
+        .swiper {width:1000px; height:40px; background-color:#eee;}
+        .swiper .swiper-wrapper {}
+        .swiper .swiper-wrapper .swiper-slide {background-color:#eee;}
+        .swiper .swiper-wrapper .swiper-slide .slide1 {}
+        .swiper .swiper-wrapper .swiper-slide .slide2 {}
+        .swiper .swiper-wrapper .swiper-slide .slide3 {}
+        .swiper .swiper-wrapper .swiper-slide .slide4 {}
+    </style>
+</head>
+<body>
+    <div class="swiper" id="news">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide1"><a href="#">이란, 호르무즈해협 봉쇄 결의…최종 승인땐 韓 원유수입 68% 막혀</a></div>
+            <div class="swiper-slide slide2"><a href="#">‘코로나19 재습격’ 우려감 커지는데…전북지역 보건소 ‘백신 재고’ 태부족 어떡하나</a></div>
+            <div class="swiper-slide slide3"><a href="#">강릉경찰서, 보이스피싱 피해금 8억원 가로챈 현금 수거책 2명 검거…1명 구속</a></div>
+            <div class="swiper-slide slide4"><a href="#">참전수당 둘쑥날쑥…애국심도 차별하나</a></div>
+        </div>
+    </div>
+    <script>
+        const newSwiper = new Swiper('#news',{
+            effect:'fade',
+            autoplay:{delay:3000},
+            loop:true,
+            direction:'vertical',
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+

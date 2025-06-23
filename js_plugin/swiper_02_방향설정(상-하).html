@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>swiper-direction1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <!--플러그인 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        * {margin:0; padding:0; line-height:1.0; box-sizing:border-box;}
+        .sale {
+            width:1250px; height:350px;
+        }
+        .sale .swiper-wrapper {}
+        .sale .swiper-wrapper .swiper-slide {
+            background-size:cover;
+            background-position:center;
+            background-repeat:no-repeat;
+            padding:100px 80px;
+        }
+        .sale .swiper-wrapper .swiper-slide h1 {color:#fff; font-size:3rem;}
+        .sale .swiper-wrapper .swiper-slide p {color:#fff; margin:20px 0 30px;font-size:2rem;}
+        .sale .swiper-wrapper .swiper-slide a {
+            background-color:#fff; color:#000; border-radius:30px;
+            padding:5px 20px; text-decoration:none;
+        }
+        .sale .swiper-wrapper .slide1 {
+            background-image:url(./images/bnr1.jpg);
+        }
+        .sale .swiper-wrapper .slide2 {
+            background-image:url(./images/bnr2.jpg);
+        }
+        .sale .swiper-wrapper .slide3 {
+            background-image:url(./images/bnr3.jpg);
+        }
+        .sale .swiper-wrapper .slide4 {
+            background-image:url(./images/bnr4.jpg);
+        }
+    </style>
+</head>
+<body>
+    <div class="swiper sale">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide1">
+                <h1>고래인형 특가</h1>
+                <p>9,900원</p>
+                <a href="#">구매하기</a>
+            </div>
+            <div class="swiper-slide slide2">
+                <h1>핸드폰 악세서리</h1>
+                <p>30,900원</p>
+                <a href="#">구매하기</a>
+            </div>
+            <div class="swiper-slide slide3">
+                <h1>카메라 폰케이스</h1>
+                <p>19,900원</p>
+                <a href="#">구매하기</a>
+            </div>
+            <div class="swiper-slide slide4">
+                <h1>신학기 노트 특가</h1>
+                <p>3,900원</p>
+                <a href="#">구매하기</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const saleSwiper = new Swiper('.sale',{
+            autoplay:{delay:2000},
+            roop:true,
+            direction:'horizontal',
+        })
+    </script>
+</body>
+</html>
+
+
+
+
+
+
